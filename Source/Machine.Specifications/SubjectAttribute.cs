@@ -6,7 +6,7 @@ namespace Machine.Specifications
   public class SubjectAttribute : Attribute
   {
     readonly Type _subjectType;
-    readonly string _subject;
+    protected string _subject;
 
     public Type SubjectType
     {
@@ -17,6 +17,8 @@ namespace Machine.Specifications
     {
       get { return _subject; }
     }
+
+    public SubjectAttribute() { }
 
     public SubjectAttribute(Type subjectType)
     {
